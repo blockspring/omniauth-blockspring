@@ -16,7 +16,7 @@ module OmniAuth
       info do
         {
           'nickname' => raw_info['username'],
-          'name' => raw_info['name'].empty? ? raw_info['username'] : raw_info['name'],
+          'name' => raw_info['name'].to_s.empty? ? raw_info['username'] : raw_info['name'],
           'organization' => raw_info['organization']
         }
       end
